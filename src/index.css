@@ -656,14 +656,6 @@ a {
   color: var(--muted);
 }
 
-.footer__credit {
-  font-size: 0.82rem;
-}
-
-.footer a {
-  color: var(--gold);
-}
-
 @media (max-width: 900px) {
   .nav__links,
   .nav__cta {

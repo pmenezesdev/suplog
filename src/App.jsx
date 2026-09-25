@@ -485,21 +485,6 @@ export default function App() {
       <footer className="footer">
         <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" width="1024" height="402" />
         <p>SUPLOG · Recife — PE</p>
-        <p className="footer__credit">
-          Vídeos de fundo, licença livre:{" "}
-          <a
-            href="https://www.pexels.com/video/aerial-view-of-container-ship-at-port-29903737/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            navio no porto
-          </a>
-          {" e "}
-          <a href="https://www.pexels.com/video/29927895/" target="_blank" rel="noreferrer">
-            segundo plano do porto
-          </a>
-          , Pexels.
-        </p>
       </footer>
     </>
   );
