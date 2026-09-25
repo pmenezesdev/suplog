@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 
-const CLIPS = ["/hero.mp4", "/hero-2.mp4"];
+const CLIPS = [`${import.meta.env.BASE_URL}hero.mp4`, `${import.meta.env.BASE_URL}hero-2.mp4`];
 
 const NAV = [
   ["Sobre", "#sobre"],
@@ -120,9 +120,10 @@ export default function App() {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     const videos = () => [...root.querySelectorAll("video")];
     const apply = () => {
-      videos().forEach((video) => {
-        if (media.matches) video.pause();
-        else video.play().catch(() => {});
+      videos().forEach((video, index) => {
+        const active = !media.matches && index === clip;
+        if (active) video.play().catch(() => {});
+        else video.pause();
       });
     };
     apply();
@@ -135,7 +136,7 @@ export default function App() {
       window.clearInterval(timer);
       media.removeEventListener("change", apply);
     };
-  }, []);
+  }, [clip]);
 
   useEffect(() => {
     const nodes = document.querySelectorAll(".reveal");
@@ -231,7 +232,7 @@ export default function App() {
                 muted
                 loop
                 playsInline
-                preload={index === 0 ? "auto" : "metadata"}
+                preload="auto"
                 aria-hidden="true"
               >
                 <source src={src} type="video/mp4" />

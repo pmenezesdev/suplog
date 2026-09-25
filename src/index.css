@@ -232,13 +232,11 @@ a {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 1100ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero__video.is-active {
   opacity: 1;
-  animation: drift 22s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
 }
 
 .hero__shade {
@@ -337,43 +335,6 @@ a {
   transform: none;
 }
 
-.reveal.is-in .areas li,
-.reveal.is-in .services li {
-  animation: rise 400ms cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-
-.reveal.is-in .areas li:nth-child(2),
-.reveal.is-in .services li:nth-child(2) {
-  animation-delay: 40ms;
-}
-
-.reveal.is-in .areas li:nth-child(3),
-.reveal.is-in .services li:nth-child(3) {
-  animation-delay: 80ms;
-}
-
-.reveal.is-in .areas li:nth-child(4),
-.reveal.is-in .services li:nth-child(4) {
-  animation-delay: 120ms;
-}
-
-.reveal.is-in .areas li:nth-child(5),
-.reveal.is-in .services li:nth-child(5) {
-  animation-delay: 160ms;
-}
-
-.reveal.is-in .areas li:nth-child(6),
-.reveal.is-in .services li:nth-child(6) {
-  animation-delay: 200ms;
-}
-
-.reveal.is-in .services li:nth-child(7) { animation-delay: 240ms; }
-.reveal.is-in .services li:nth-child(8) { animation-delay: 280ms; }
-.reveal.is-in .services li:nth-child(9) { animation-delay: 320ms; }
-.reveal.is-in .services li:nth-child(10) { animation-delay: 360ms; }
-.reveal.is-in .services li:nth-child(11) { animation-delay: 400ms; }
-.reveal.is-in .services li:nth-child(12) { animation-delay: 440ms; }
-
 .faq p {
   animation: rise 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -399,14 +360,6 @@ a {
   }
 }
 
-@keyframes drift {
-  from {
-    transform: scale(1.05);
-  }
-  to {
-    transform: scale(1.12) translate3d(0, -1.5%, 0);
-  }
-}
 
 .section {
   width: min(var(--max), calc(100% - 40px));
@@ -761,8 +714,6 @@ a {
   .hero__video.is-active,
   .hero__copy > *,
   .reveal,
-  .reveal.is-in .areas li,
-  .reveal.is-in .services li,
   .faq p,
   .drawer.is-open a,
   .btn,
