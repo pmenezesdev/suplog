@@ -9,7 +9,7 @@
   --line: rgba(245, 197, 24, 0.35);
   --card: #16181f;
   --max: 1120px;
-  --nav: 84px;
+  --nav: 92px;
   color-scheme: dark;
 }
 
@@ -98,9 +98,13 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.nav__logo img {
-  height: 46px;
+.nav__logo img,
+.footer img {
+  height: 62px;
   width: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px 8px;
 }
 
 .nav__links {
@@ -647,8 +651,7 @@ a {
 }
 
 .footer img {
-  height: 42px;
-  width: auto;
+  height: 72px;
 }
 
 .footer p {

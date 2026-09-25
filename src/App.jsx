@@ -182,7 +182,7 @@ export default function App() {
 
       <header className={scrolled ? "nav is-solid" : "nav"}>
         <a className="nav__logo" href="#topo" aria-label="SUPLOG, início">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" width="250" height="98" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" width="925" height="296" />
         </a>
         <nav className="nav__links" aria-label="Seções">
           {NAV.map(([label, href]) => (
@@ -483,7 +483,7 @@ export default function App() {
       </a>
 
       <footer className="footer">
-        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" width="250" height="98" />
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" width="925" height="296" />
         <p>SUPLOG · Recife — PE</p>
         <p className="footer__credit">
           Vídeos de fundo, licença livre:{" "}
